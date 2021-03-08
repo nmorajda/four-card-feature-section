@@ -1,0 +1,132 @@
+$breakpoint: 768px;
+
+$gap: 3rem;
+
+$font-family-primary: 'Poppins', sans-serif;
+
+// colors
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$dark: hsl(234, 12%, 34%);
+$grey: hsl(229, 6%, 66%);
+$light: hsl(0, 0%, 98%);
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-family-primary;
+    font-size: 1.5rem;
+    color: $grey;
+    background-color: $light;
+}
+
+h1, h2 {
+    color: $dark;
+}
+
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.header {
+    margin: 6rem 0 4rem 0;
+    &__title {
+        font-size: 2.2rem;
+        text-align: center;
+        span {
+            display: block;
+            font-weight: 200;
+        }
+
+        @media (min-width: $breakpoint) {
+            font-size: 3.4rem;
+        }
+    }
+
+    &__lead {
+        max-width: 50rem;
+        margin: 2.6rem auto 5rem auto;
+        text-align: center;
+    }
+}
+
+
+.cards {
+    
+    @media (min-width: $breakpoint) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.card {
+    position: relative;
+    max-width: 37rem;
+    min-height: 28rem;
+    padding: $gap;
+    margin: $gap auto; 
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.1);
+    border-radius: 5px;
+
+    @media (min-width: $breakpoint) {
+        margin-left: $gap/2;
+        margin-right: $gap/2;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 1.3rem;
+    }
+
+    &__img {
+        position: absolute;
+        right: $gap;
+        bottom: $gap;
+
+    }
+
+    &--cyan {
+        border-top: 5px solid $cyan;
+    }
+
+    &--red {
+        border-top: 5px solid $red;
+    }
+
+    &--orange {
+        border-top: 5px solid $orange;
+    } 
+
+    &--blue {
+        border-top: 5px solid $blue;
+    }        
+}
+
+.footer {
+    margin: 6rem 0;;
+    font-size: 1.3rem;
+    text-align: center;
+    a {
+        color: $red;
+    }
+}
